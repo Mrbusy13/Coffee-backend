@@ -2,7 +2,7 @@
   "name": "coffee-backend",
   "version": "1.0.0",
   "description": "Express Server with MongoDB for my-coffee-app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "test",
     "start": "node app.js",
@@ -19,7 +19,10 @@
   },
   "homepage": "https://github.com/Mrbusy13/Coffee-backend#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.0.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
