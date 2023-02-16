@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Express Server with MongoDB for my-coffee-app",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "test": "test",
     "start": "node -r dotenv/config server.js",

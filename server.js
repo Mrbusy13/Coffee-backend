@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose"
+import router from "./routes/coffeeshops.js";
 
 //express app
 const app = express();
@@ -15,7 +16,7 @@ app.use((req, res, next)=>{
 })
 
 //routes
-app.use("/api/coffeeshops", coffeeshopRoutes)
+app.use("/api/coffeeshops", router)
 
 //connect to db;
 mongoose.connect(process.env.ATLAS_URI)

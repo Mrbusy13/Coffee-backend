@@ -1,11 +1,11 @@
 import express from "express";
 import {
-  getAllCoffeeshops,
-  getCoffeeshop,
-  addCoffeeshop,
-  deleteCoffeeshop,
-  updateCoffeeshop
-} from "//file tbc";
+  getAllCoffeeshops
+  // getCoffeeshop,
+  // addCoffeeshop,
+  // deleteCoffeeshop,
+  // updateCoffeeshop
+} from "../controllers/coffeeshopController.js";
 
 // router is an instance of the express router.
 // We use it to define our routes.
@@ -16,15 +16,15 @@ const router = express.Router();
 router.get("/", getAllCoffeeshops)
 
 // get a single coffeeshop
-router.get("/:id", getCoffeeshop)
+// router.get("/:id", getCoffeeshop)
 
-// post a new coffeeshop
-router.post("/", addCoffeeshop)
+// // post a new coffeeshop
+// router.post("/", addCoffeeshop)
 
-// delete a coffeeshop
-router.delete("/:id", deleteCoffeeshop)
+// // delete a coffeeshop
+// router.delete("/:id", deleteCoffeeshop)
 
-// update a coffeeshop
-router.update("/:id", updateCoffeeshop)
+// // update a coffeeshop
+// router.update("/:id", updateCoffeeshop)
 
 export default router;
