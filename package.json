@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "test",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node -r dotenv/config server.js",
+    "dev": "nodemon -r dotenv/config server.js"
   },
   "repository": {
     "type": "git",
@@ -22,7 +22,8 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongodb": "^5.0.1"
+    "mongodb": "^5.0.1",
+    "mongoose": "^6.9.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
