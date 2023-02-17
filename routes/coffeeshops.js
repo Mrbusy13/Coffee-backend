@@ -3,8 +3,8 @@ import {
   getAllCoffeeshops,
   getCoffeeshop,
   createCoffeeshop,
-  // deleteCoffeeshop,
-  // updateCoffeeshop
+  deleteCoffeeshop,
+  updateCoffeeshop
 } from "../controllers/coffeeshopController.js";
 
 // router is an instance of the express router.
@@ -21,10 +21,10 @@ router.get("/:id", getCoffeeshop);
 // post a new coffeeshop
 router.post("/", createCoffeeshop);
 
-// // delete a coffeeshop
-// router.delete("/:id", deleteCoffeeshop)
+// delete a coffeeshop
+router.delete("/:id", deleteCoffeeshop)
 
-// // update a coffeeshop
-// router.update("/:id", updateCoffeeshop)
+// update a coffeeshop
+router.patch("/:id", updateCoffeeshop)
 
 export default router;

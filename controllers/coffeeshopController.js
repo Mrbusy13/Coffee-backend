@@ -31,17 +31,31 @@ export const createCoffeeshop = async (req, res) => {
   }
 };
 // function delete a coffeeshop
-// export const deleteCoffeeshop = async (req, res) => {
-//     const { id } = req.params.id;
+export const deleteCoffeeshop = async (req, res) => {
+    const { id } = req.params;
 
-//     try {
-//       const deletedCoffeeshop = await Coffeeshop.deleteOne(id);
-//       res.status(200).json(deletedCoffeeshop);
-//     } catch (error) {
-//       res.status(400).json({ error: "Delete operation could not be performed." });
-//     }
-//   };
+    try {
+      const deletedCoffeeshop = await Coffeeshop.deleteOne(id);
+      res.status(200).json(deletedCoffeeshop);
+    } catch (error) {
+      res.status(400).json({ error: "Delete operation could not be performed." });
+    }
+  };
 // function update a coffeeshop
+export const updateCoffeeshop = async (req, res) => {
+  const { id } = req.params;
+
+  if (!mongoose.Types.ObjectId.isValid(id)) {
+    res.status(400).json({ error: "No coffee shop found with that ID." });
+    return;
+  }
+  const updatedCoffeeshop = await Coffeeshop.findOneAndUpdate({_id:id}, {...req.body});
+    res.status(200).json("Coffee Shop Updated", updatedCoffeeshop);
+  
+  if (!updatedCoffeeshop){
+    return res.status(400).json({ error: "Update operation could not be performed"})
+  }
+};
 
 // import Coffeeshop from "../models/coffeeshopModel.js";
 
