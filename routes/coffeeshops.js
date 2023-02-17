@@ -1,8 +1,8 @@
 import express from "express";
 import {
-  getAllCoffeeshops
-  // getCoffeeshop,
-  // addCoffeeshop,
+  getAllCoffeeshops,
+  getCoffeeshop,
+  createCoffeeshop,
   // deleteCoffeeshop,
   // updateCoffeeshop
 } from "../controllers/coffeeshopController.js";
@@ -13,13 +13,13 @@ import {
 const router = express.Router();
 
 // get all coffeeshops
-router.get("/", getAllCoffeeshops)
+router.get("/", getAllCoffeeshops);
 
 // get a single coffeeshop
-// router.get("/:id", getCoffeeshop)
+router.get("/:id", getCoffeeshop);
 
-// // post a new coffeeshop
-// router.post("/", addCoffeeshop)
+// post a new coffeeshop
+router.post("/", createCoffeeshop);
 
 // // delete a coffeeshop
 // router.delete("/:id", deleteCoffeeshop)
