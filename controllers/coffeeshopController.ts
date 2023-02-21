@@ -1,14 +1,17 @@
 import Coffeeshop from "../models/Coffeeshops.js";
 import mongoose from "mongoose";
 
+type getAllCoffeeshops = () => void;
+
+
 //function getAllCoffeeshops
-export const getAllCoffeeshops = async (req, res) => {
+export const getAllCoffeeshops = async (req: Request, res: Response):Promise<void>  => {
   const data = await Coffeeshop.find({});
   res.status(200).json(data);
 };
 
 // function get single coffeeshop
-export const getCoffeeshop = async (req, res) => {
+export const getCoffeeshop = async (req: Request, res: Response) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
     res.status(400).json({ error: "No coffee shop found with that ID." });
@@ -20,7 +23,7 @@ export const getCoffeeshop = async (req, res) => {
 };
 
 // function create a coffeeshop
-export const createCoffeeshop = async (req, res) => {
+export const createCoffeeshop = async (req: Request, res: Response) => {
   const { name, town } = req.body;
 
   try {
