@@ -15,6 +15,8 @@ const router = express.Router();
 // get all coffeeshops
 router.get("/", getAllCoffeeshops);
 
+router.get("/", getsomething)
+
 // get a single coffeeshop
 router.get("/:id", getCoffeeshop);
 
