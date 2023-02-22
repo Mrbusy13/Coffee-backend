@@ -4,8 +4,8 @@ import {
   getCoffeeshop,
   createCoffeeshop,
   deleteCoffeeshop,
-  updateCoffeeshop
-} from "../controllers/coffeeshopController.js";
+  updateCoffeeshop,
+} from "../controllers/coffeeshopController.js"
 
 // router is an instance of the express router.
 // We use it to define our routes.
@@ -15,8 +15,6 @@ const router = express.Router();
 // get all coffeeshops
 router.get("/", getAllCoffeeshops);
 
-router.get("/", getsomething)
-
 // get a single coffeeshop
 router.get("/:id", getCoffeeshop);
 
@@ -24,9 +22,9 @@ router.get("/:id", getCoffeeshop);
 router.post("/", createCoffeeshop);
 
 // delete a coffeeshop
-router.delete("/:id", deleteCoffeeshop)
+router.delete("/:id", deleteCoffeeshop);
 
 // update a coffeeshop
-router.patch("/:id", updateCoffeeshop)
+router.patch("/:id", updateCoffeeshop);
 
 export default router;

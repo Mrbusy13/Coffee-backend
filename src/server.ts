@@ -1,7 +1,10 @@
 import express from "express";
 import cors from "cors";
 import mongoose from "mongoose"
-import router from "./routes/coffeeshops.js";
+import router from "./routes/coffeeshops.js"
+import dotenv from "dotenv"
+
+dotenv.config()
 
 //express app
 const app = express();
@@ -19,14 +22,15 @@ app.use((req, res, next)=>{
 app.use("/api/coffeeshops", router)
 
 //connect to db;
-mongoose.connect(process.env.ATLAS_URI)
-.then(()=> {
-//listen for requests
+// await replaces the need for .then and .catch because within ES6 await is performing in the same way.
+
+try {
+  await mongoose.connect(process.env.ATLAS_URI)
   app.listen(PORT, ()=> {
-    console.log(`DB connected and Server is listening on http://localhost:${PORT}`);
+    console.log(`DB connected and Server is really listening on http://localhost:${PORT}`);
   });  
-})
-.catch((error)=>{
+} catch(error){
     console.log(error)
-})
+}
+
 export default app;
