@@ -8,6 +8,7 @@ dotenv.config()
 
 //express app
 const app = express();
+const ATLAS_URI= process.env.ATLAS_URI
 const PORT = process.env.PORT;
 
 //middleware
@@ -23,14 +24,15 @@ app.use("/api/coffeeshops", router)
 
 //connect to db;
 // await replaces the need for .then and .catch because within ES6 await is performing in the same way.
-
-try {
-  await mongoose.connect(process.env.ATLAS_URI)
+if(ATLAS_URI){
+  try {
+  await mongoose.connect(ATLAS_URI)
   app.listen(PORT, ()=> {
     console.log(`DB connected and Server is really listening on http://localhost:${PORT}`);
   });  
 } catch(error){
     console.log(error)
+}
 }
 
 export default app;

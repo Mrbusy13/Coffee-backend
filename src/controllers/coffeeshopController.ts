@@ -1,14 +1,15 @@
 import Coffeeshop from "../models/Coffeeshops.js"
 import mongoose from "mongoose";
+import {Request, Response} from "express"
 
 //function getAllCoffeeshops
-export const getAllCoffeeshops = async (req, res) => {
+export const getAllCoffeeshops = async (req: Request, res: Response) => {
   const data = await Coffeeshop.find({});
   res.status(200).json(data);
 };
 
 // function get single coffeeshop
-export const getCoffeeshop = async (req, res) => {
+export const getCoffeeshop = async (req: Request, res: Response) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
     res.status(400).json({ error: "No coffee shop found with that ID." });
@@ -20,29 +21,29 @@ export const getCoffeeshop = async (req, res) => {
 };
 
 // function create a coffeeshop
-export const createCoffeeshop = async (req, res) => {
+export const createCoffeeshop = async (req: Request, res: Response) => {
   const { name, town } = req.body;
 
   try {
     const coffeeshop = await Coffeeshop.create({ name, town });
     res.status(200).json(coffeeshop);
   } catch (error) {
-    res.status(400).json({ error: "There was a problem" });
+    res.status(400).json("There was a problem");
   }
 };
 // function delete a coffeeshop
-export const deleteCoffeeshop = async (req, res) => {
+export const deleteCoffeeshop = async (req: Request, res: Response) => {
   const { id } = req.params;
 
   try {
-    const deletedCoffeeshop = await Coffeeshop.deleteOne(id);
+    const deletedCoffeeshop = await Coffeeshop.deleteOne({_id: id});
     res.status(200).json(deletedCoffeeshop);
   } catch (error) {
     res.status(400).json({ error: "Delete operation could not be performed." });
   }
 };
 // function update a coffeeshop
-export const updateCoffeeshop = async (req, res) => {
+export const updateCoffeeshop = async (req: Request, res: Response) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -53,7 +54,7 @@ export const updateCoffeeshop = async (req, res) => {
     { _id: id },
     { ...req.body }
   );
-  res.status(200).json("Coffee Shop Updated", updatedCoffeeshop);
+  res.status(200).json({message:"Coffee Shop Updated", data: updatedCoffeeshop});
 
   if (!updatedCoffeeshop) {
     return res
