@@ -3,10 +3,6 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 const coffeeshopSchema = new Schema(
   {
-    _id: {
-      type: Number,
-      required: false
-    },
     name: {
       type: String,
       required: true,

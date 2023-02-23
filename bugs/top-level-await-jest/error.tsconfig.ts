@@ -101,7 +101,7 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "include": ["src/**/*", "__tests__/routes/coffeeshops.test.ts"],
-  "exclude": ["./coverage", "./dist","./bugs", "./__tests__", "jest.config.ts"],
+  "exclude": ["./coverage", "./dist", "__tests__", "jest.config.ts"],
   "ts-node": {
     "transpileOnly": true,
     "files": true
