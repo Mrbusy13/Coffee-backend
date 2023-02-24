@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677251584191" clover="3.2.0">
-  <project timestamp="1677251584191" name="All files">
-    <metrics statements="69" coveredstatements="44" conditionals="4" coveredconditionals="1" methods="7" coveredmethods="3" elements="80" coveredelements="48" complexity="0" loc="69" ncloc="69" packages="4" files="4" classes="4"/>
+<coverage generated="1677258320591" clover="3.2.0">
+  <project timestamp="1677258320591" name="All files">
+    <metrics statements="67" coveredstatements="46" conditionals="4" coveredconditionals="1" methods="6" coveredmethods="3" elements="77" coveredelements="50" complexity="0" loc="67" ncloc="67" packages="4" files="4" classes="4"/>
     <package name="src">
-      <metrics statements="22" coveredstatements="21" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+      <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
       <file name="server.ts" path="/Users/nathangray/Projects/SOC_Workshops/coffee/Coffee-backend/src/server.ts">
-        <metrics statements="22" coveredstatements="21" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -15,25 +15,23 @@
         <line num="10" count="1" type="stmt"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="32" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="28" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.controllers">
-      <metrics statements="33" coveredstatements="9" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="1"/>
+      <metrics statements="33" coveredstatements="13" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="2"/>
       <file name="coffeeshopController.ts" path="/Users/nathangray/Projects/SOC_Workshops/coffee/Coffee-backend/src/controllers/coffeeshopController.ts">
-        <metrics statements="33" coveredstatements="9" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="1"/>
+        <metrics statements="33" coveredstatements="13" conditionals="3" coveredconditionals="0" methods="5" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -47,10 +45,10 @@
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="35" count="1" type="stmt"/>
         <line num="36" count="0" type="stmt"/>

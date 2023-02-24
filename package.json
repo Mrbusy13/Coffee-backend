@@ -9,7 +9,7 @@
     "start": "node -r dotenv/config ./dist/server.js",
     "tsc": "tsc",
     "postinstall": "npm run tsc",
-    "dev": "node --watch --loader ts-node/esm ./src/server.ts",
+    "dev": "node --watch --loader ts-node/esm ./src/app.ts",
     "dev-old": "ts-node-dev --respawn --pretty --transpile-only -r dotenv/config ./src/server.ts"
   },
   "repository": {
