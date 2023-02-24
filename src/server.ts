@@ -10,11 +10,7 @@ dotenv.config();
 const app = express();
 const ATLAS_URI = process.env.ATLAS_URI;
 const PORT = process.env.PORT;
-const server = app.listen(PORT, () => {
-  console.log(
-    `DB connected and Server is really listening on http://localhost:${PORT}`
-  );
-});
+
 
 //middleware
 app.use(cors());
@@ -39,4 +35,4 @@ if (ATLAS_URI) {
 }
 
 
-export {app , server};
+export default app;
