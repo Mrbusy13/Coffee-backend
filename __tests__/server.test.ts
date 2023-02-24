@@ -1,27 +1,28 @@
-import request from "supertest"
-import {app, server} from "../src/server"
-import mongoose from "mongoose"
+import request from "supertest";
+import { app, server } from "../src/server";
+import mongoose from "mongoose";
 
 describe("Test server.ts", () => {
   afterAll(async () => {
-    mongoose.connection.close()
-    .then(()=>{
-      server.close()
-    })
-    })
+    server.close();
+  });
 
-    test("Catch-all route", async () => {
-        const res = await request(app).get("/api/coffeeshops");
+  test("Catch-all route", (done) => {
+    request(app)
+      .get("/api/coffeeshops")
+      .end((err, res) => {
         expect(res.status).toEqual(200);
-        res.body.forEach((cafe:object)=>{
+        res.body.forEach((cafe: object) => {
           expect(cafe).toHaveProperty("name");
           expect(cafe).toHaveProperty("town");
-        })
-    })
-})
+        });
+        done();
+      });
+  });
+});
 
 describe("Server.ts tests", () => {
-    test("Math test", () => {
-      expect(2 + 2).toBe(4);
-    });
+  test("Math test", () => {
+    expect(2 + 2).toBe(4);
   });
+});

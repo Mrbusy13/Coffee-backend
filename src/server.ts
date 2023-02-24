@@ -31,12 +31,12 @@ app.use("/api/coffeeshops", router);
 // await replaces the need for .then and .catch because within ES6 await is performing in the same way.
 if (ATLAS_URI) {
   try {
-    mongoose.connect(ATLAS_URI).then(() => {
-      return server
-    });
+    mongoose.connect(ATLAS_URI);
+    
   } catch (error) {
     console.log(error);
   }
 }
+
 
 export {app , server};
