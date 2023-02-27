@@ -17,10 +17,10 @@ const router = express.Router();
 router.get("/", getAllCoffeeshops);
 
 // get a single coffeeshop by ID
-router.get("/:id", getCoffeeshop);
+router.get("/:search", getCoffeeshop);
 
 // get a single coffeeshop by name
-router.get("/:name", getCoffeeshopByName);
+router.get("/name", getCoffeeshopByName);
 
 // post a new coffeeshop
 router.post("/", createCoffeeshop);

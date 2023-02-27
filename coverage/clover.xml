@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1677505365027" clover="3.2.0">
-  <project timestamp="1677505365027" name="All files">
+<coverage generated="1677507595116" clover="3.2.0">
+  <project timestamp="1677507595116" name="All files">
     <metrics statements="76" coveredstatements="57" conditionals="7" coveredconditionals="2" methods="7" coveredmethods="5" elements="90" coveredelements="64" complexity="0" loc="76" ncloc="76" packages="4" files="4" classes="4"/>
     <package name="src">
       <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="server.ts" path="/Users/nickhughes/Documents/My Projects/Coffee-near-me/Coffee-backend/src/server.ts">
+      <file name="server.ts" path="/Users/nathangray/Projects/SOC_Workshops/coffee/Coffee-backend/src/server.ts">
         <metrics statements="20" coveredstatements="19" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -30,7 +30,7 @@
     </package>
     <package name="src.controllers">
       <metrics statements="41" coveredstatements="23" conditionals="6" coveredconditionals="1" methods="6" coveredmethods="4"/>
-      <file name="coffeeshopController.ts" path="/Users/nickhughes/Documents/My Projects/Coffee-near-me/Coffee-backend/src/controllers/coffeeshopController.ts">
+      <file name="coffeeshopController.ts" path="/Users/nathangray/Projects/SOC_Workshops/coffee/Coffee-backend/src/controllers/coffeeshopController.ts">
         <metrics statements="41" coveredstatements="23" conditionals="6" coveredconditionals="1" methods="6" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -77,7 +77,7 @@
     </package>
     <package name="src.models">
       <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="Coffeeshops.ts" path="/Users/nickhughes/Documents/My Projects/Coffee-near-me/Coffee-backend/src/models/Coffeeshops.ts">
+      <file name="Coffeeshops.ts" path="/Users/nathangray/Projects/SOC_Workshops/coffee/Coffee-backend/src/models/Coffeeshops.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -88,7 +88,7 @@
     </package>
     <package name="src.routes">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="coffeeshops.ts" path="/Users/nickhughes/Documents/My Projects/Coffee-near-me/Coffee-backend/src/routes/coffeeshops.ts">
+      <file name="coffeeshops.ts" path="/Users/nathangray/Projects/SOC_Workshops/coffee/Coffee-backend/src/routes/coffeeshops.ts">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
