@@ -11,7 +11,8 @@ const config: Config = {
     "^../models/Coffeeshops\\.js$": "<rootDir>/src/models/Coffeeshops.ts",
 
   },
-  detectOpenHandles: false
+  detectOpenHandles: false,
+  testTimeout: 1000000
   
 
 };

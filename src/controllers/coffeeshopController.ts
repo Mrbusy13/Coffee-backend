@@ -8,17 +8,29 @@ export const getAllCoffeeshops = async (req: Request, res: Response) => {
   res.status(200).json(data);
 };
 
-// function get single coffeeshop
+// function get single coffeeshop by ID
 export const getCoffeeshop = async (req: Request, res: Response) => {
   const { id } = req.params;
   if (!mongoose.Types.ObjectId.isValid(id)) {
-    res.status(400).json({ error: "No coffee shop found with that ID." });
+    res.status(400).json({ error: "No coffee shop found" });
     return;
   }
 
   const coffeeshop = await Coffeeshop.findById(id);
   res.status(200).json(coffeeshop);
 };
+
+// function get single coffeeshop by name
+export const getCoffeeshopByName = async (req:Request, res:Response) => {
+  const { name } = req.params;
+  if (!mongoose.Types.ObjectId.isValid(name)) {
+    res.status(400).json({error: "No Coffeeshop found"});
+    return;
+  }
+
+  const namedCoffeeshop = await Coffeeshop.findOne({name:name});
+  res.status(200).json(namedCoffeeshop);
+}
 
 // function create a coffeeshop
 export const createCoffeeshop = async (req: Request, res: Response) => {
@@ -33,15 +45,19 @@ export const createCoffeeshop = async (req: Request, res: Response) => {
 };
 // function delete a coffeeshop
 export const deleteCoffeeshop = async (req: Request, res: Response) => {
-  const { id } = req.params;
+  const {id} = req.params;
 
   try {
-    const deletedCoffeeshop = await Coffeeshop.deleteOne({_id: id});
+    const query = mongoose.Types.ObjectId.isValid(id)
+    ? { _id: id }
+    : { name: id };
+    const deletedCoffeeshop = await Coffeeshop.deleteOne(query);
     res.status(200).json(deletedCoffeeshop);
   } catch (error) {
     res.status(400).json({ error: "Delete operation could not be performed." });
   }
 };
+
 // function update a coffeeshop
 export const updateCoffeeshop = async (req: Request, res: Response) => {
   const { id } = req.params;

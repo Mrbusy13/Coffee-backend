@@ -5,6 +5,7 @@ import {
   createCoffeeshop,
   deleteCoffeeshop,
   updateCoffeeshop,
+  getCoffeeshopByName,
 } from "../controllers/coffeeshopController.js"
 
 // router is an instance of the express router.
@@ -15,8 +16,11 @@ const router = express.Router();
 // get all coffeeshops
 router.get("/", getAllCoffeeshops);
 
-// get a single coffeeshop
+// get a single coffeeshop by ID
 router.get("/:id", getCoffeeshop);
+
+// get a single coffeeshop by name
+router.get("/:name", getCoffeeshopByName);
 
 // post a new coffeeshop
 router.post("/", createCoffeeshop);
